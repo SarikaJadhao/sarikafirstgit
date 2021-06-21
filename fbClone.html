@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" id="fbClone">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook-Clone</title>
+    <link rel="stylesheet" href="fbClone.css">
+</head>
+<body>
+    <div id="container">
+        <div class="content clearfix">
+            <div>
+                <div class="innerContent1">
+                    <div class="innerContent2">
+                        <div class="contentHeading">
+                            <div class="logo">
+                                <img class="fbLogo" src="Images/logo.svg" alt="fbClone">
+                            </div>
+                            <h2 class="fbText">Facebook helps you connect and share with the people in your life.</h2>
+                        </div>
+                        <div class="contentForm">
+                            <div class="innerContentForm">
+                                <div class="innerForm">
+                                    <form name = "testForm" class="loginForm" action="fbLogin.html" method="POST" onsubmit="return validateUser()">
+                                        <div>
+                                            <div class="fbCredentials">
+                                                <input type="text" class="inputText" name="email" id="email" placeholder="  Email address or phone number" autofocus="1" aria-label="Email address or phone number">
+                                            </div>
+                                            <div class="fbCredentials">
+                                                <div class="passContainer">
+                                                    <input type="password" class="inputText" name="pass" id="pass" placeholder="Password" aria-label="Password">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="loginButton">
+                                            <button value="1" class="btn" name="login" type="submit" id="loginBtn">
+                                                Log In
+                                            </button>
+                                        </div>
+                                        <div class="forgotPass">
+                                            <a href="forgotPass.html">Forgotten password?</a>
+                                        </div>
+                                        <div class="blank"></div>
+                                        <div class="createAccount">
+                                            <a role="button" class="accButton" href="#" id="newAccBtn" rel="async">
+                                                Create New Account
+                                            </a>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div id="pageMsg" class="pageMessage">
+                                    <a href="registrationForm.html" class="regForm">Create a Page</a>
+                                    " for a celebraty, band or business."
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function validateUser() {
+            var username = document.forms["testForm"]["name"].value;
+            if(username == null || username == ""){
+                alert("Please enter Email address or Phone number.")
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>
